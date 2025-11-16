@@ -1,84 +1,553 @@
-<style>
-
-@import url('https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap');
-
-
-#profile{
-    width: 200px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 100%;
-    display: block;
-    margin-top: 150px;
-}
-
-#list{
-    color: black;
-    font-size: 25px;
-    font-family: 'Cutive Mono', monospace;
-    padding: 14px;
-    text-transform: uppercase;
-}
-
-.footer {
-  font-family: 'Cutive Mono', monospace;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: white;
-  color: black;
-  text-align: center;
-}
-
-</style>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- <title>Homepage</title> -->
-  <title>Homepage</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rizky Amanatama — Software Engineer & Data Scientist</title>
 
-  <link rel="icon" type="image/ico" href="sgtryu1.png"/>
+    <meta
+      name="description"
+      content="Software Engineer and Data Scientist building fast, elegant, and scalable products. Portfolio of projects, experience, and contact."
+    />
 
-  <!--Meta Tags-->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="sgtryu1.png" />
 
-  <!--Bootstrap CSS-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!--jQuery, Propper.js, and Bootstrap js-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      href="myProfile.jpg"
+      as="image"
+      imagesrcset="myProfile.jpg 1x"
+      imagesizes="(max-width: 640px) 128px, 200px"
+    />
+
+    <link rel="canonical" href="https://rizkyaris24.github.io/" />
+
+    <meta
+      property="og:title"
+      content="Rizky Amanatama — Software Engineer & Data Scientist"
+    />
+    <meta
+      property="og:description"
+      content="Building fast, elegant, and scalable products."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rizkyaris24.github.io/" />
+    <meta property="og:image" content="myProfile.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rizky Amanatama",
+        "jobTitle": "Software Engineer, Data Scientist",
+        "url": "https://rizkyaris24.github.io/",
+        "image": "https://rizkyaris24.github.io/myProfile.jpg",
+        "sameAs": [
+          "https://github.com/rizkyaris24",
+          "https://www.linkedin.com/in/rizky-amanatama-8aa726146/",
+          "https://www.instagram.com/rizky.amanatama"
+        ]
+      }
+    </script>
 </head>
+
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <span class="brand">Rizky Amanatama</span>
 
-  <img src="myProfile.jpg" class="rounded mx-auto d-block rounded-circle" alt="Main Picture" id="profile">
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
 
-    <ul class="list-inline text-center" id="list">
-            <li class="list-inline-item"><a href="#"><a href="./blogpost.html" class="text-dark text-decoration-none" >Blogspot</a></li>
-            <li class="list-inline-item"><a href="#"><a href="./aboutme.html" class="text-dark text-decoration-none" >About Me</a></li>
-            <li class="list-inline-item"><a href="#"><a href="./projects.html" class="text-dark text-decoration-none" >Projects</a></li>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
     </ul>
 
+        <button
+          class="theme-toggle"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+        >
+          <span class="theme-icon">🌙</span>
+        </button>
+      </nav>
+    </header>
 
-    <div class="text-center" id="contacts">
-            <a href="https://github.com/rizkyaris24" target="_blank"><img src="github.png" class="rounded img-fluid" alt="github"></a>
-            <a href="https://www.instagram.com/rizky.amanatama?igsh=a3p0MmdzbWZ2MHBk&utm_source=qr" target="_blank"><img src="instagram.png" class="rounded img-fluid" alt="instagram"></a>
-            <a href="https://www.linkedin.com/in/rizky-amanatama-8aa726146/" target="_blank"><img src="linkedin.png" class="rounded img-fluid" alt="linkedin"></a>
-            <a href="mailto:r.aris09@gmail.com" target="_blank"><img src="mail.png" class="rounded img-fluid" alt="email"></a>
+    <main id="main">
+      <!-- HERO -->
+      <section id="hero" class="section hero">
+        <div class="hero-content">
+          <img
+            src="myProfile.jpg"
+            alt="Portrait of Rizky Amanatama"
+            class="avatar"
+            width="200"
+            height="200"
+            loading="eager"
+            decoding="async"
+          />
+
+          <h1 class="hero-title">
+            I build Software and AI Products for Business.
+          </h1>
+
+          <p class="hero-subtitle">
+            Software Engineer & Data Scientist.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Get in Touch</a>
+          </div>
+
+          <div class="social">
+            <a
+              href="https://github.com/rizkyaris24"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <img
+                class="icon"
+                src="github.png"
+                alt=""
+                width="28"
+                height="28"
+                loading="lazy"
+              />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/rizky-amanatama-8aa726146/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <img
+                class="icon"
+                src="linkedin.png"
+                alt=""
+                width="28"
+                height="28"
+                loading="lazy"
+              />
+            </a>
+
+            <a href="mailto:r.aris09@gmail.com" aria-label="Email">
+              <img
+                class="icon"
+                src="mail.png"
+                alt=""
+                width="28"
+                height="28"
+                loading="lazy"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section about" aria-labelledby="about-title">
+        <h2 class="section-title" id="about-title">About</h2>
+
+        <p>
+          Hi! My name is Rizky Amanatama, a computer science Graduate. I am 26 years old. Currently I am working at PT Surveyor as a Data Scientist. I have a passion for technology and programming, and I love to explore new things. I am also interested in AI and machine learning. I am always looking for new challenges and opportunities to learn and grow.
+        </p>
+      </section>
+
+      <!-- SKILLS -->
+      <section
+        id="skills"
+        class="section skills"
+        aria-labelledby="skills-title"
+      >
+        <h2 class="section-title" id="skills-title">Skills</h2>
+
+        <div class="logo-grid">
+          <div class="logo">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript"
+              width="56"
+              height="56"
+              loading="lazy"
+            />
+            <span>JavaScript</span>
+          </div>
+
+          <div class="logo">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              alt="Node.js"
+              width="56"
+              height="56"
+              loading="lazy"
+            />
+            <span>Node.js</span>
+          </div>
+
+          <div class="logo">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+              alt="TypeScript"
+              width="56"
+              height="56"
+              loading="lazy"
+            />
+            <span>TypeScript</span>
+          </div>
+
+          <div class="logo">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              alt="React Native"
+              width="56"
+              height="56"
+              loading="lazy"
+            />
+            <span>React Native</span>
+          </div>
+
+          <div class="logo">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              alt="Python"
+              width="56"
+              height="56"
+              loading="lazy"
+            />
+            <span>Python</span>
     </div>
 
+          <div class="logo">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+              alt="PHP"
+              width="56"
+              height="56"
+              loading="lazy"
+            />
+            <span>PHP</span>
+          </div>
+        </div>
+      </section>
 
-    
-</body>
-<div class="footer">
-        <p id="Bottom">Build and Design by Rizky Amanatama ©<br/><br/>
-            Est 2025</p>
+      <!-- EXPERIENCE -->
+      <section
+        id="experience"
+        class="section experience"
+        aria-labelledby="experience-title"
+      >
+        <h2 class="section-title" id="experience-title">Experience</h2>
+
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+              <h3>
+                Programmer (Software Engineering & Data Science) at PT Surveyor
+                Indonesia
+              </h3>
+              <p>Jakarta, Indonesia · Jul 2025 – Present</p>
+
+              <ul class="bullets">
+                <li>
+                  Built and deployed SI-ISPO web app to streamline certification
+                  workflows.
+                </li>
+                <li>
+                  Customized LimeSurvey for large-scale data collection and
+                  reporting.
+                </li>
+                <li>
+                  Optimized an AI-powered marketing app for performance and
+                  insights.
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+              <h3>
+                Junior Officer, Strategic Transformation Office, PT Surveyor
+                Indonesia
+              </h3>
+              <p>Jakarta, Indonesia · Jun 2023 – Jul 2025</p>
+
+              <ul class="bullets">
+                <li>
+                  Coordinated research with Telkom University; supported VP of
+                  Transformation.
+                </li>
+                <li>
+                  Led a 12-person team delivering digital marketing and INDI 4.0
+                  initiatives.
+                </li>
+                <li>
+                  Implemented INDI 4.0 assessments; maintained portfolio
+                  dashboards.
+                </li>
+                <li>
+                  Supported PDP compliance and OHS steering programs.
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+              <h3>Intern at KodeKiddo</h3>
+              <p>Jakarta, Indonesia · Aug 2020 – Feb 2021</p>
+
+              <ul class="bullets">
+                <li>
+                  Taught HTML/CSS/JS, Java, and Python; produced engaging
+                  course materials.
+                </li>
+                <li>
+                  Improved student test participation by 15% through coaching
+                  and mentoring.
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- PROJECTS -->
+      <section
+        id="projects"
+        class="section projects"
+        aria-labelledby="projects-title"
+      >
+        <h2 class="section-title" id="projects-title">Projects</h2>
+
+        <div class="grid cards">
+          <!-- Project 1 -->
+          <article class="card">
+            <h3 class="card-title">ToDoList App with AI Assistant</h3>
+            <p class="card-desc">
+              Smart task management with AI suggestions and prioritization.
+            </p>
+
+            <div class="card-actions">
+              <a
+                class="btn small"
+                href="https://github.com/rizkyaris24/SmartAIList"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card">
+            <h3 class="card-title">Mood App</h3>
+            <p class="card-desc">
+              Lightweight mood tracking with charts and trends.
+            </p>
+
+            <div class="card-actions">
+              <a
+                class="btn small"
+                href="https://github.com/rizkyaris24/MoodApp"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card">
+            <h3 class="card-title">ToDoList App (Web)</h3>
+            <p class="card-desc">
+              Clean web to-do app using modern JS patterns.
+            </p>
+
+            <div class="card-actions">
+              <a
+                class="btn small"
+                href="https://github.com/rizkyaris24/ToDoListApp"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="card">
+            <h3 class="card-title">Typing Game</h3>
+            <p class="card-desc">Typing game with HTML and JavaScript.</p>
+
+            <div class="card-actions">
+              <a
+                class="btn small"
+                href="https://github.com/sgtryu1/Typing-Test"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="card">
+            <h3 class="card-title">To Do List (iOS)</h3>
+            <p class="card-desc">A simple iOS to-do list app.</p>
+
+            <div class="card-actions">
+              <a
+                class="btn small"
+                href="https://github.com/sgtryu1/To-Do-List"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="card">
+            <h3 class="card-title">Calculator (iOS)</h3>
+            <p class="card-desc">A clean calculator app for iOS.</p>
+
+            <div class="card-actions">
+              <a
+                class="btn small"
+                href="https://github.com/sgtryu1/Calculator"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 7 -->
+          <article class="card">
+            <h3 class="card-title">Discord Bot</h3>
+            <p class="card-desc">Discord bot for a personal server.</p>
+
+            <div class="card-actions">
+              <a
+                class="btn small"
+                href="https://github.com/sgtryu1/lolbot"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section
+        id="contact"
+        class="section contact"
+        aria-labelledby="contact-title"
+      >
+        <h2 class="section-title" id="contact-title">Contact</h2>
+
+        <p>
+          Open to Software Engineering and Data Science roles, freelance, or
+          collaborations. If you have any questions or want to work with me, feel free to contact me through my social media or email.
+        </p>
+
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:r.aris09@gmail.com">Email Me</a>
+
+          <a
+            class="btn ghost"
+            href="https://www.linkedin.com/in/rizky-amanatama-8aa726146/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
 </div> 
 
+        <div class="social" aria-label="Social links">
+          <a
+            href="https://github.com/rizkyaris24"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            ><img
+              class="icon"
+              src="github.png"
+              alt=""
+              width="28"
+              height="28"
+              loading="lazy"
+          /></a>
+
+          <a
+            href="https://www.linkedin.com/in/rizky-amanatama-8aa726146/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            ><img
+              class="icon"
+              src="linkedin.png"
+              alt=""
+              width="28"
+              height="28"
+              loading="lazy"
+          /></a>
+
+          <a
+            href="https://www.instagram.com/rizky.amanatama"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+            ><img
+              class="icon"
+              src="instagram.png"
+              alt=""
+              width="28"
+              height="28"
+              loading="lazy"
+          /></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Build and Design by Rizky Amanatama.</p>
+    </footer>
+  </body>
+</html>
